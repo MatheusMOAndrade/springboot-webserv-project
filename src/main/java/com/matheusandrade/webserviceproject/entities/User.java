@@ -25,7 +25,7 @@ public class User implements Serializable {
     private String phone;
     private String password;
 
-    @JsonIgnore //stop json loot crash
+    @JsonIgnore //stop json loop crash
     @OneToMany(mappedBy = "client") //Class Order attribute
     private List<Order> orders = new ArrayList<>(); //association
 
